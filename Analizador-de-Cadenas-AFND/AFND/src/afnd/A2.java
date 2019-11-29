@@ -40,13 +40,22 @@ public class A2 {
         
         System.out.println("Estado A");
         System.out.println("cont = " + cont + "char=" + cadena.charAt(cont));
-        if(cont==lon-1){
+        if(cont==lon-1 && cadena.charAt(cont)=='1'){
             System.out.println("La cadena pertenece al lenguaje (1A)");
             respuesta="La cadena pertenece al lenguaje (1A)";
         }
-        if(cont<lon-1){
-            cont++;
-            A();
+        if(cont<lon-1 && vuelta==2){
+            //cont++;
+            //A();
+            if(cadena.charAt(cont)=='1'){
+                cont++;
+                A();
+            }
+            else{
+                System.out.println("La cadena no pertenece al lenguaje (1A)");
+                respuesta="La cadena no pertenece al lenguaje (1A)";
+            }
+            
         }
     }
     
@@ -63,7 +72,7 @@ public class A2 {
                 inicio();
             }
         }
-        if(cont<lon-1){
+        if(cont<lon-1 && vuelta==1){
             cont++;
             C();
             
